@@ -33,7 +33,7 @@ class Program
             }
             Console.WriteLine("You guessed it!");
             Console.WriteLine($"The number of time you play is {count}");
-            Console.WriteLine("Do you want to play again: ");
+            Console.Write("Do you want to play again: ");
             replay = Console.ReadLine();
 
         } while (replay == "yes");
