@@ -1,0 +1,23 @@
+on Control
+
+Version Control is a system in which programmers can add, modify, and check the history of code that has been changed by team members. It is used when collaboration is necessary or the programmer wants the public to have access to the source code he is writing
+
+Benefits
+
+It helps the programmer to keep track of records
+It helps the teams understand new code added as a result of a meaningful commit message
+It tracks the changes made, either staged or modified.
+Examples:
+If you are working with a programmer who does not live close by and you want to develop an application together, you will use a version control system. This will help code that has been modified or added to reflect on both the programmer's local computer by using the Git commands for it.
+
+Common Code
+
+git add <filename>: This command, used on the terminal, will add the file specified to the staging area. You can also use period(.) in place of the file name to add all files changed or modified in the parent and subordinate folder/ directory to the staging area
+
+git status: This helps to know the status of the repository, either staged, unstage or clean. it can also be used to debug what is wrong with the repo
+
+git init: This is used to initialise a repository on the local machine.
+
+git commit: This is used to commit a descriptive message for other members to understand what has changed in the code
+
+git push: This is used to push the repository to a GitHub account that can be viewed by other members of the team
