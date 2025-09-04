@@ -91,40 +91,6 @@ class Program
             Console.WriteLine("You failed the course, try again next time");
         }
 
-
-        // if (numberGrade >= 70)
-        // {
-        //     if (numberGrade >= 90)
-        //     {
-        //         letterGrade = "A";
-        //         Console.WriteLine(letterGrade);
-        //     }
-        //     else if (numberGrade >= 80)
-        //     {
-        //         letterGrade = "B";
-        //         Console.WriteLine(letterGrade);
-        //     }
-        //     else if (numberGrade >= 70)
-        //     {
-        //         letterGrade = "C";
-        //         Console.WriteLine(letterGrade);
-        //     }
-        //     Console.WriteLine("Congratulation you pass the course");
-        // }
-        // else
-        // {
-        //     if (numberGrade >= 60)
-        //     {
-        //         letterGrade = "D";
-        //         Console.WriteLine(letterGrade);
-        //     }
-        //     else
-        //     {
-        //         letterGrade = "F";
-        //         Console.WriteLine(letterGrade);
-        //     }
-        //     Console.WriteLine("You failed the course, try again next time");
-        // }
     }
 
 
