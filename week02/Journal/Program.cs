@@ -1,6 +1,6 @@
 using System;  
 // Import the System namespace, gives access to basic classes like Console, DateTime, etc.
-
+// Improve the process of saving and loading to save as a .csv file that could be opened in Excel (make sure to account for quotation marks and commas correctly in your content.
 class Program  
 // Define the main Program class that contains the entry point of the application.
 {
