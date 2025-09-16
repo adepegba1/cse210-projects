@@ -42,11 +42,10 @@ public class Fractions
     }
     
 
-       public int SetTop(int value)
-        // Sets a new value for the numerator and returns it.
+       public void SetTop(int value)
+        // Sets a new value for the numerator.
     {
         _top = value;
-        return _top;
     }
    
 
@@ -57,11 +56,10 @@ public class Fractions
     }
    
 
-        public int SetBottom(int value)
-        // Sets a new value for the denominator and returns it.
+        public void SetBottom(int value)
+        // Sets a new value for the denominator.
     {
         _bottom = value;
-        return _bottom;
     }
     
 
