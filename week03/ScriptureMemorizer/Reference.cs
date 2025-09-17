@@ -15,16 +15,17 @@ public class Reference
  // - _endVerse: ending verse number (optional, for when the reference covers multiple verses)
     private int _endVerse;
 
-        public Reference(string book, int chapter, int verse)
+    public Reference(string book, int chapter, int verse)
     {
         // This constructor is used when you want to create a reference with ONE verse.
         // Example: new Reference("John", 3, 16) will store "John 3:16".
         _book = book;
         _chapter = chapter;
         _verse = verse;
+        
     }
 
-        public Reference(string book, int chapter, int startVerse, int endVerse)
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         // This constructor is used when the reference covers MULTIPLE verses.
         // Example: new Reference("John", 3, 16, 17) will store "John 3:16–17".

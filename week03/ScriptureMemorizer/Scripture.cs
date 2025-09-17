@@ -23,36 +23,37 @@ public class Scripture
         // For each word, create a new Word object
         // Then store all these Word objects inside a List<Word>
         _words = text.Split(" ").Select(word => new Word(word)).ToList();
+        
     }
 
     public void HideRandomWords(int numberToHide)
     {
-        // Create a random number generator
         Random rand = new Random();
 
-        // Count how many words we have hidden so far
-        int hiddenCount = 0;
+        // Get the list of words that are still visible
+        List<Word> visibleWords = _words.Where(word => !word.IsHidden()).ToList();
 
-        // Keep looping until we hide the requested number of words
-        while (hiddenCount < numberToHide)
+        // If there are no visible words left, nothing to hide
+        if (visibleWords.Count == 0)
         {
-            // Pick a random index from the list of words
-            int index = rand.Next(_words.Count);
+            return;
+        }
 
-            // Check if the word at that position is already hidden
-            if (!_words[index].IsHidden())
-            {
-                // If it is not hidden, hide it
-                _words[index].Hide();
+        // If fewer words are left than the number we want to hide,
+        // just reduce numberToHide to the count of visible words
+        if (visibleWords.Count < numberToHide)
+        {
+            numberToHide = visibleWords.Count;
+        }
 
-                // Increase the hidden counter
-                hiddenCount++;
-            }
-
-            // If it is already hidden, the loop will try again
+        // Loop until we hide the required number of words
+        for (int i = 0; i < numberToHide; i++)
+        {
+            int index = rand.Next(visibleWords.Count);  // Pick a random visible word
+            visibleWords[index].Hide();                 // Hide it
+            visibleWords.RemoveAt(index);               // Remove from list so it won't be picked again
         }
     }
-
     public string GetDisplayText()
     {
         // Take every Word object in the _words list
