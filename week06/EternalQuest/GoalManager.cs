@@ -98,7 +98,7 @@ public class GoalManager
     {
         List<string> goalNames = new List<string>();
         goalNames.Add("1. Simple Goal");
-        goalNames.Add("2. Enternal Goal");
+        goalNames.Add("2. Eternal Goal");
         goalNames.Add("3. Checklist Goal");
 
         // Loop through list and display each goal type
@@ -146,7 +146,7 @@ public class GoalManager
 
             case "2": // Create an EternalGoal
 
-                _goal.Add(new EnternalGoal(shortName, description, points)); // Add goal to list
+                _goal.Add(new EternalGoal(shortName, description, points)); // Add goal to list
                 break;
 
             case "3": // Create a ChecklistGoal
@@ -235,7 +235,7 @@ public class GoalManager
             }
             else if (goalType == "EnternalGoal")
             {
-                _goal.Add(new EnternalGoal(goalData[0], goalData[1], int.Parse(goalData[2])));
+                _goal.Add(new EternalGoal(goalData[0], goalData[1], int.Parse(goalData[2])));
             }
             else if (goalType == "ChecklistGoal")
             {

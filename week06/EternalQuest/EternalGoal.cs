@@ -1,12 +1,12 @@
 using System;  // Import the System namespace, which provides basic functionalities like Console, String, etc.
 
 // Define a class called 'EnternalGoal' that inherits from the base class 'Goal'
-public class EnternalGoal : Goal
+public class EternalGoal : Goal
 {
     // Constructor: called when a new EnternalGoal object is created
     // It takes three parameters (shortName, description, and points)
     // and passes them to the base class (Goal) constructor using 'base()'
-    public EnternalGoal(string shortName, string description, int points) : base(shortName, description, points)
+    public EternalGoal(string shortName, string description, int points) : base(shortName, description, points)
     {
         // No extra setup is needed for EnternalGoal, so the constructor body is empty
     }
@@ -42,6 +42,6 @@ public class EnternalGoal : Goal
     {
         // It stores the goal type and its details separated by colons and pipes
         // Example: EnternalGoal:Read Scriptures|Read daily|50
-        return $"EnternalGoal:{GetshortName()}|{Getdescription()}|{Getpoint()}";
+        return $"EternalGoal:{GetshortName()}|{Getdescription()}|{Getpoint()}";
     }
 }
